@@ -90,63 +90,208 @@ class Feed1 extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
-                                height: 220,
+                                height: 340,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.only(
                                     topLeft: Radius.circular(20),
                                     topRight: Radius.circular(20),
                                   ),
-                                  color: Colors.blue,
+                                  image: DecorationImage(
+                                    image: AssetImage('assets/caramelo.jpg'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      bottom: 0,
+                                      child: Container(
+                                        width: 500,
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                            begin: Alignment.topCenter,
+                                            end: Alignment.bottomCenter,
+                                            colors: [
+                                              Colors.black54,
+                                              Colors.black26,
+                                            ],
+                                            stops: [0.3, 1],
+                                          ),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Icon(
+                                                    Icons.pets,
+                                                    color: Colors.red,
+                                                    size: 15,
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            left: 4, top: 2),
+                                                    child: Text(
+                                                      '20 patinhas',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 12,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 4),
+                                                child: Text(
+                                                  'Mal sabe que esta indo para o veterinario',
+                                                  style: TextStyle(
+                                                      color: Colors.white),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
                               Container(
-                                height: 80,
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 10),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                  child: Column(
                                     children: [
                                       Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
                                         children: [
-                                          CircleAvatar(
-                                            radius: 30,
-                                          ),
                                           Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 10, top: 15),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                            padding:
+                                                const EdgeInsets.only(top: 8),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
                                               children: [
-                                                Text('Mauri'),
-                                                Text(
-                                                    'Amarelo, Caramelo Brasileiro'),
-                                                Text(
-                                                  'Curitiba',
-                                                  style: TextStyle(
-                                                      fontSize: 11,
-                                                      color: Colors.black45),
-                                                )
+                                                CircleAvatar(
+                                                  radius: 24,
+                                                  backgroundColor: Colors.green,
+                                                  child: CircleAvatar(
+                                                    radius: 24,
+                                                    backgroundImage: AssetImage(
+                                                        'assets/mauri.jpg'),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    left: 10,
+                                                  ),
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text('Mauri'),
+                                                      Text(
+                                                          'Amarelo, Caramelo Brasileiro'),
+                                                      Text(
+                                                        'Curitiba',
+                                                        style: TextStyle(
+                                                            fontSize: 11,
+                                                            color:
+                                                                Colors.black45),
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
                                               ],
                                             ),
                                           ),
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Column(
-                                          children: [
-                                            Transform.rotate(
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Transform.rotate(
                                               angle: 180 * pi / 100,
                                               child: Icon(Icons.send),
                                             ),
-                                            SizedBox(height: 10),
-                                            Icon(Icons.message),
+                                          )
+                                        ],
+                                      ),
+                                      Divider(),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 6),
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              'Raul',
+                                              style: TextStyle(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 4),
+                                              child: Text(
+                                                'Muito grande para mim 😏',
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                ),
+                                              ),
+                                            ),
+                                            Spacer(),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 8),
+                                              child: Icon(
+                                                Icons.pets,
+                                                color: Colors.red,
+                                                size: 15,
+                                              ),
+                                            )
                                           ],
                                         ),
-                                      )
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 8),
+                                        child: Text(
+                                            'Ver todos os 5 comentários',
+                                            style: TextStyle(
+                                                color: Colors.black54)),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 4),
+                                        child: Container(
+                                          height: 45,
+                                          child: Card(
+                                            // elevation: 2,
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(20)),
+                                            child: TextFormField(
+                                              decoration: InputDecoration(
+                                                hintText: 'Comentar',
+                                                contentPadding:
+                                                    EdgeInsets.symmetric(
+                                                        horizontal: 20,
+                                                        vertical: 10),
+                                                suffixIcon: Icon(Icons.message),
+                                                border: InputBorder.none,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -164,64 +309,208 @@ class Feed1 extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
-                                height: 220,
+                                height: 340,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.only(
                                     topLeft: Radius.circular(20),
                                     topRight: Radius.circular(20),
                                   ),
-                                  color: Colors.green,
+                                  image: DecorationImage(
+                                    image: AssetImage('assets/pinscher.jpg'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      bottom: 0,
+                                      child: Container(
+                                        width: 500,
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                            begin: Alignment.topCenter,
+                                            end: Alignment.bottomCenter,
+                                            colors: [
+                                              Colors.black54,
+                                              Colors.black26,
+                                            ],
+                                            stops: [0.3, 1],
+                                          ),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Icon(
+                                                    Icons.pets,
+                                                    color: Colors.red,
+                                                    size: 15,
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            left: 4, top: 2),
+                                                    child: Text(
+                                                      '48 patinhas',
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 12,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 4),
+                                                child: Text(
+                                                  'Mau de mais',
+                                                  style: TextStyle(
+                                                      color: Colors.white),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
                               Container(
-                                height: 80,
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 10),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                  child: Column(
                                     children: [
                                       Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
                                         children: [
-                                          CircleAvatar(
-                                            radius: 30,
-                                            backgroundColor: Colors.green,
-                                          ),
                                           Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 10, top: 15),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                            padding:
+                                                const EdgeInsets.only(top: 8),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
                                               children: [
-                                                Text('Raul'),
-                                                Text(
-                                                    'Banquinho, Pinscher miniatura'),
-                                                Text(
-                                                  'Curitiba',
-                                                  style: TextStyle(
-                                                      fontSize: 11,
-                                                      color: Colors.black45),
-                                                )
+                                                CircleAvatar(
+                                                  radius: 24,
+                                                  backgroundColor: Colors.green,
+                                                  child: CircleAvatar(
+                                                    radius: 22,
+                                                    backgroundImage: AssetImage(
+                                                        'assets/raul.jpg'),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    left: 10,
+                                                  ),
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text('Raul'),
+                                                      Text(
+                                                          'Banquinho, Pinscher miniatura'),
+                                                      Text(
+                                                        'Curitiba',
+                                                        style: TextStyle(
+                                                            fontSize: 11,
+                                                            color:
+                                                                Colors.black45),
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
                                               ],
                                             ),
                                           ),
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Column(
-                                          children: [
-                                            Transform.rotate(
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Transform.rotate(
                                               angle: 180 * pi / 100,
                                               child: Icon(Icons.send),
                                             ),
-                                            SizedBox(height: 10),
-                                            Icon(Icons.message),
+                                          )
+                                        ],
+                                      ),
+                                      Divider(),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 6),
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              'Mauri',
+                                              style: TextStyle(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 4),
+                                              child: Text(
+                                                'Cadê a focinheira? Perigo isso ai!!',
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                ),
+                                              ),
+                                            ),
+                                            Spacer(),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 8),
+                                              child: Icon(
+                                                Icons.pets,
+                                                color: Colors.red,
+                                                size: 15,
+                                              ),
+                                            )
                                           ],
                                         ),
-                                      )
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 8),
+                                        child: Text(
+                                            'Ver todos os 5 comentários',
+                                            style: TextStyle(
+                                                color: Colors.black54)),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 4),
+                                        child: Container(
+                                          height: 45,
+                                          child: Card(
+                                            // elevation: 2,
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(20)),
+                                            child: TextFormField(
+                                              decoration: InputDecoration(
+                                                hintText: 'Comentar',
+                                                contentPadding:
+                                                    EdgeInsets.symmetric(
+                                                        horizontal: 20,
+                                                        vertical: 10),
+                                                suffixIcon: Icon(Icons.message),
+                                                border: InputBorder.none,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
