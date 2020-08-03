@@ -7,7 +7,6 @@ class Feed1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      backgroundColor: Colors.blue[50],
       body: Stack(
         children: [
           Container(
