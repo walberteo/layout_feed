@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'screen/feed_1.dart';
 import 'screen/feed_2.dart';
+import 'screen/feed_3.dart';
 
 void main() {
   runApp(MyApp());
